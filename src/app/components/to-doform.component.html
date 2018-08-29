@@ -13,7 +13,7 @@
     
       <mat-card-content>
         <mat-radio-group name='priorityLevel' [(ngModel)] = "priority">
-          <mat-radio-button *ngFor="let item of priorityList" value="item">
+          <mat-radio-button *ngFor="let item of priorityList" [value]="item">
             {{item}}  
           </mat-radio-button>
         </mat-radio-group>

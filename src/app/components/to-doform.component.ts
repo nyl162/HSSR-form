@@ -1,4 +1,5 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms'
 
 @Component({
   selector: 'app-to-doform',
@@ -9,8 +10,8 @@ export class ToDoformComponent implements OnInit {
 
   priorityList: string[] = ["High","Medium","Low"];
   
-  @ViewChild('Entry')
-  Entry : NgForm ;
+  @ViewChild('ToDoFormEntry')
+  ToDoFormEntry : NgForm ;
 
   constructor() { }
 
@@ -18,7 +19,7 @@ export class ToDoformComponent implements OnInit {
   }
 
   FormInputAction(){
-    console.log(this.Entry.task);
+    console.log(this.ToDoFormEntry.value);
   }
 
 }
