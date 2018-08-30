@@ -10,7 +10,7 @@ import { EventEmitter } from 'protractor';
 
 interface ToDolist {
   taskL: string;
-  priorityLevel: 
+  priorityLevel: string;
 }
 
 export class ToDoformComponent implements OnInit {
