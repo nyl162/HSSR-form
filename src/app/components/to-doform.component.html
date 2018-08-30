@@ -1,10 +1,10 @@
 <form #ToDoFormEntry="ngForm" (ngSubmit)="FormInputAction()" fxLayout='column'>
   <mat-form-field>
-    <input type="text" name="task" placeholder="Please enter new task" ngModel matInput>
+    <input type="text" name="task" placeholder="Please enter new task" ngModel matInput required>
   </mat-form-field>
   <div fxLayout = "row" fxLayoutGap="2vw"> 
     <mat-form-field fxFlex="grow">
-      <input matInput [matDatepicker]="picker" placeholder="DueDate" ngModel matInput name="due">
+      <input matInput [matDatepicker]="picker" placeholder="DueDate" ngModel matInput name="due" required>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
@@ -14,7 +14,7 @@
     <div fxLayout="column" fxLayoutAlign = "start" fxFlex="grow">
       <div>Priority:</div>
 
-      <mat-radio-group name="priorityLevel" [(ngModel)] = "priority" fxLayout="row" fxLayoutAlign = "start" fxLayoutGap="2vw">
+      <mat-radio-group name="priorityLevel" [(ngModel)] = "priority" fxLayout="row" fxLayoutAlign = "start" fxLayoutGap="2vw" required>
         <mat-radio-button *ngFor="let item of priorityList" [value]="item">
           {{item}}  
         </mat-radio-button>
@@ -22,7 +22,7 @@
     </div>
 
     <div>
-      <button mat-raised-button color="primary" type="submit">
+      <button mat-raised-button color="primary" type="submit" [disabled]="ToDoFormEntry.invalid">
         <mat-icon>library_add</mat-icon>
         Add
       </button>
