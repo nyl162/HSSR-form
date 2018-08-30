@@ -1,8 +1,8 @@
-<mat-card>
-  <mat-card-header>
+<div fxLayout = "column" fxLayoutAlign="start">
+  <mat-toolbar>
     Task
-  </mat-card-header>
-  <mat-card-content *ngFor="let n of CompomentToDoList">
+  </mat-toolbar>
+  <div *ngFor="let n of CompomentToDoList">
     {{n.taskL}}
-  </mat-card-content>
-</mat-card>
+  </div>
+</div>

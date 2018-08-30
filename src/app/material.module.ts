@@ -9,9 +9,16 @@ import {MatRadioModule} from "@angular/material/radio"
 import {MatDatepickerModule} from '@angular/material/datepicker';
 //import { MatNativeDateModule } from "@angular/material/core";
 import { MatMomentDateModule} from '@angular/material-moment-adapter';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { MatIconModule } from "@angular/material";
 
 
-const MODULE = [MatToolbarModule,MatFormFieldModule,MatInputModule,MatButtonModule,MatCardModule,MatRadioModule,MatDatepickerModule,/*MatNativeDateModule*/ MatMomentDateModule];
+const MODULE = [MatToolbarModule,MatFormFieldModule,MatInputModule,
+                MatButtonModule,MatCardModule,MatRadioModule,
+                MatDatepickerModule,/*MatNativeDateModule*/ 
+                MatMomentDateModule,FlexLayoutModule,
+                MatIconModule
+                ];
 
 @NgModule({
     imports: MODULE,

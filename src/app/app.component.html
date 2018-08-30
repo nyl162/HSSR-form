@@ -1,4 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<div fxLayout="column">
 <mat-toolbar color="primary">
     <h1>
     {{ title }}
@@ -7,4 +8,4 @@
  <app-to-doform (AddToList)="AddListItem($event)"></app-to-doform>
  <app-to-dolist [CompomentToDoList]='MasterToDoList'></app-to-dolist>
 
-
+</div>
