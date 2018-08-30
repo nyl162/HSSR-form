@@ -5,8 +5,8 @@
   <div *ngFor="let n of CompomentToDoList">
     <mat-card class="cardSize">
       <mat-card-content>
-        <div fxLayoutAlign ="start" class="taskTitle">
-          {{n.taskL}}
+        <div fxLayoutAlign ="space-between" class="taskTitle">
+          <div fxFlex="glow">{{n.taskL}}</div>
         </div>
         <div fxLayoutAlign ="space-between">
           <span> 
