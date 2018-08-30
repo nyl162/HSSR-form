@@ -4,7 +4,7 @@
     {{ title }}
     </h1>
 </mat-toolbar>
- <app-to-doform></app-to-doform>
- <app-to-dolist></app-to-dolist>
+ <app-to-doform (AddToList)="AddListItem($event)"></app-to-doform>
+ <app-to-dolist [CompomentToDoList]='MasterToDoList'></app-to-dolist>
 
 
