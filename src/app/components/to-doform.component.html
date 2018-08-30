@@ -14,7 +14,7 @@
     <div fxLayout="column" fxLayoutAlign = "start" fxFlex="grow">
       <div>Priority:</div>
 
-      <mat-radio-group name="priorityLevel" [(ngModel)] = "priority" fxLayout="row" fxLayoutAlign = "start" fxLayoutGap="2vw" required>
+      <mat-radio-group name="priorityLevel" [(ngModel)] = "priorityLevel" fxLayout="row" fxLayoutAlign = "start" fxLayoutGap="2vw" required>
         <mat-radio-button *ngFor="let item of priorityList" [value]="item">
           {{item}}  
         </mat-radio-button>
