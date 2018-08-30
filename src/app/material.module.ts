@@ -6,9 +6,12 @@ import {MatInputModule} from "@angular/material/input"
 import {MatButtonModule} from "@angular/material/button"
 import {MatCardModule} from "@angular/material/card"
 import {MatRadioModule} from "@angular/material/radio"
-//import {MatMomentDateModule} from "@angular/material-moment-adapter"
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from "@angular/material/core";
+//import MatMomentDateModule
 
-const MODULE = [MatToolbarModule,MatFormFieldModule,MatInputModule,MatButtonModule,MatCardModule,MatRadioModule/*,MatMomentDateModule*/];
+
+const MODULE = [MatToolbarModule,MatFormFieldModule,MatInputModule,MatButtonModule,MatCardModule,MatRadioModule,MatDatepickerModule,MatNativeDateModule/*, MatMomentDateModule*/];
 
 @NgModule({
     imports: MODULE,
