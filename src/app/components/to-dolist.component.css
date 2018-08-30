@@ -1,0 +1,7 @@
+.cardSize {
+    max-width: 600px;
+    margin: 2px;
+  }
+.taskTitle{
+    font-size: 2em;
+}

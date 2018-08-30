@@ -5,7 +5,7 @@ import { Moment } from 'moment';
 export interface ToDolist {
   taskL: string;
   priorityLevel: string;
-  dueL: Date;
+  dueL: string;
 }
 
 @Component({
@@ -30,11 +30,12 @@ export class ToDoformComponent implements OnInit {
   }
 
   FormInputAction(){
-    console.log(this.ToDoFormEntry.value);
+    console.log(this.ToDoFormEntry.value.due.format('MMM DD'));
     const EventExport: ToDolist = {  taskL: this.ToDoFormEntry.value.task,
       priorityLevel: this.ToDoFormEntry.value.priorityLevel,
-      dueL: this.ToDoFormEntry.value.due._d}
+      dueL: this.ToDoFormEntry.value.due.format('MMM DD')}
     this.AddToList.next(EventExport);
+    this.ToDoFormEntry.reset();
   }
 
 }

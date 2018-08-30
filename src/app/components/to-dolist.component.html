@@ -3,6 +3,20 @@
     Task
   </mat-toolbar>
   <div *ngFor="let n of CompomentToDoList">
-    {{n.taskL}}
+    <mat-card class="cardSize">
+      <mat-card-content>
+        <div fxLayoutAlign ="start" class="taskTitle">
+          {{n.taskL}}
+        </div>
+        <div fxLayoutAlign ="space-between">
+          <span> 
+           {{n.priorityLevel}} 
+          </span>
+          <span>
+            {{n.dueL}}
+          </span>
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
 </div>
