@@ -6,6 +6,9 @@ export interface ToDolist {
   taskL: string;
   priorityLevel: string;
   dueL: string;
+  dueM: Moment;
+  taskID: number;
+  taskSTAT: string;
 }
 
 @Component({
@@ -33,7 +36,11 @@ export class ToDoformComponent implements OnInit {
     console.log(this.ToDoFormEntry.value.due.format('MMM DD'));
     const EventExport: ToDolist = {  taskL: this.ToDoFormEntry.value.task,
       priorityLevel: this.ToDoFormEntry.value.priorityLevel,
-      dueL: this.ToDoFormEntry.value.due.format('MMM DD')}
+      dueL: this.ToDoFormEntry.value.due.format('MMM DD'),
+      dueM: this.ToDoFormEntry.value.due,
+      taskID: 0,
+      taskSTAT: 'new'
+    }
     this.AddToList.next(EventExport);
     this.ToDoFormEntry.reset();
   }
